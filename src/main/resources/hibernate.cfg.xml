@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://mueoz30332dns.eastus2.cloudapp.azure.com:3306/shopping?allowPublicKeyRetrieval=true&useSSL=false</property>
+        <property name="hibernate.connection.url">jdbc:mysql://mueoz30332dns.eastus2.cloudapp.azure.com:3306/shopping?allowPublicKeyRetrieval=true&useSSL=true</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">Welcome123$</property>
         <property name="hibernate.connection.pool_size">1</property>
