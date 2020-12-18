@@ -1,14 +1,18 @@
 version: '2'
 services:
     mysql:
-        image: mysql
+        image: mysql:8.0
         ports: 
             - 3306:3306
         volumes:
             - /var/lib/docker/volumes:/var/lib/mysql
+    volumes:
+       data:
+          external: true
     shop-application: 
         image: shop-application
         restart: on-failure
         ports: 
             - 8080:8080
+        
           
