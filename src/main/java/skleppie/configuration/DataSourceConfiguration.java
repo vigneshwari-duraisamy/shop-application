@@ -14,7 +14,7 @@ public class DataSourceConfiguration {
     @Primary
     public DataSource dataSource() {
         DataSourceBuilder builder = DataSourceBuilder.create();
-        builder.url("jdbc:mysql://localhost:3306/shopping?useSSL=false")
+        builder.url("jdbc:mysql://mueoz30332dns.eastus2.cloudapp.azure.com:3306/shopping?useSSL=false")
                 .username("root")
                 .password("Welcome123$")
                 .driverClassName("com.mysql.cj.jdbc.Driver");
