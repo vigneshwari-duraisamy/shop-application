@@ -15,8 +15,8 @@ services:
         restart: on-failure
         ports: 
             - 8080:8080
-        depends_on:
-            mysql:
-              condition: service_healthy
+        links:
+            - mysql
+              
         
           
