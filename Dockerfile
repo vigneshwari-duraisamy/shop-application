@@ -1,7 +1,7 @@
 FROM openjdk:8
 
-COPY ./target/CrudApp-*.jar CrudApp.jar
+COPY ./target/CrudApp-*.war CrudApp.war
 
 EXPOSE 8080
 
-CMD ["java","-jar","CrudApp.jar"]
+CMD ["java","-jar","CrudApp.war"]
