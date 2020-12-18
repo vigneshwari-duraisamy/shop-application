@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-COPY ./target/CrudApp-*.jar-*.jar CrudApp.jar
+COPY ./target/CrudApp-*.jar CrudApp.jar
 
 EXPOSE 8080
 
