@@ -4,8 +4,11 @@ services:
         image: mysql:8.0
         ports: 
             - 3306:3306
-    shopapplication: 
-        image: shopapplication
+        volumes:
+            - /var/lib/docker/volumes:/var/lib/mysql
+    shop-application: 
+        image: shop-application
         restart: on-failure
         ports: 
             - 8080:8080
+          
