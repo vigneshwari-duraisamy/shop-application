@@ -5,8 +5,8 @@ services:
         ports: 
             - "3306:3306"
         environment:
-            - "MYSQL_ROOT_PASSWORD:Welcome123$"
-            - "MYSQL_USER:root"
+            - MYSQL_USER=root
+            - MYSQL_ROOT_PASSWORD=Welcome123$$
         volumes:
             - /var/lib/docker/volumes:/var/lib/mysql
     shop-application: 
