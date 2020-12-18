@@ -1,0 +1,11 @@
+version: '2'
+services:
+    mysql:
+        image: mysql:8.0
+        ports: 
+            - 3306:3306
+    shopapplication: 
+        image: shopapplication
+        restart: on-failure
+        ports: 
+            - 8080:8080
