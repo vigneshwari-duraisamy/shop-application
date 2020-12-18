@@ -16,7 +16,7 @@ public class DataSourceConfiguration {
         DataSourceBuilder builder = DataSourceBuilder.create();
         builder.url("jdbc:mysql://localhost:3306/shopping?useSSL=false")
                 .username("root")
-                .password("root")
+                .password("Welcome123$")
                 .driverClassName("com.mysql.cj.jdbc.Driver");
 
         return builder.build();
