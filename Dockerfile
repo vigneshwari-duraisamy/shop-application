@@ -1,7 +1,6 @@
-FROM openjdk:8
-
-COPY ./target/CrudApp-*.war CrudApp.war
+FROM tomcat:8.0.51-jre8-alpine
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY ./target/CrudApp-*.war  /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
-
-CMD ["java","-war","CrudApp.war"]
+CMD ["catalina.sh","run"]
