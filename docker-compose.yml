@@ -9,13 +9,13 @@ services:
             - MYSQL_ROOT_PASSWORD=Welcome123$$
             - MYSQL_DATABASE=shopping
         volumes:
-            - ./mysql:/var/lib/mysql
+            - mysql:/var/lib/mysql
         healthcheck:
             test: "/usr/bin/mysql --user=root --password=Welcome123$$ --execute \"CREATE DATABASE IF NOT EXISTS shopping;\""
             interval: 2s
             timeout: 20s
             retries: 10
-        
+   
     shop-application: 
         image: shop-application
         restart: on-failure
@@ -25,6 +25,9 @@ services:
            WAIT_HOSTS: mysql:3306 
         depends_on:
             - mysql
+            
+volumes:
+  mysql:
               
         
           
